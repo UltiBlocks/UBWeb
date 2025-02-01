@@ -1,0 +1,15 @@
+{
+  "homepage": "src/index.php",
+  "rewrites": {
+    "terms": "src/terms.php",
+    "about": "src/about.php",
+    "guidelines": "src/guidelines.php",
+    "join": "src/join.php",
+    "desktop": "src/desktop.php",
+    "api/(.+)": "src/api.php/$1"
+  },
+  "error_pages": {
+    "404": "src/404.php",
+    "403": "src/403.php"
+  }
+}

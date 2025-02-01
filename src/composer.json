@@ -1,0 +1,18 @@
+{
+    "name": "ultiblocks/ubweb",
+    "description": "UBWeb is a full-stack software for running the UltiBlocks community.",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Ultiblocks\\Ubweb\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "UltiBlocks Team"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

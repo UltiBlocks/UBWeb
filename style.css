@@ -1,0 +1,529 @@
+/* Basic reset and general styles */
+body {
+    font-family: helvetica, "Helvetica Neue", arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    display: flex; /* Enable flexbox for the body */
+    flex-direction: column; /* Stack elements vertically */
+    min-height: 100vh; /* Ensure body takes up full viewport height */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.flip {
+    transform: rotate(180deg); /* Rotate the image 180 degrees */
+}
+
+/* Header */
+main {
+    padding-top: 60px; /* Prevent overlap */
+    min-height: 100%;
+    flex: 1; /* Allow main content to take up available space */
+}
+	
+header {
+    background-color: #59C059;
+    border-bottom: 1px solid #46a346;
+    padding: 10px 20px;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px -5px 20px black;
+    z-index: 100; /* Ensure header is on top */
+}
+
+@media (max-width: 1500px) {
+    .small-window-hide {
+        display: none;
+    }
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex; /* Use flexbox for logo alignment */
+    align-items: center; /* Vertically center the logo content */
+}
+
+.logo img {
+    height: 40px; /* Set a fixed height for the logo */
+    margin-right: 10px; /* Add some spacing between the image and text */
+}
+
+.logo h1 {
+    margin: 0;
+    color: #389438;
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+.logo {
+    transition: transform 0.1s linear; /* Transition on li */
+    position: relative;
+}
+
+.logo:hover {
+	transform: scale(1.05); /* Adjust the scale value as needed */
+    backface-visibility: hidden; /* Backface visibility on li */
+}
+
+.beta-mark {
+    position: absolute;
+    top: -5px; /* Adjust vertical position */
+    right: -20px; /* Adjust horizontal position */
+    font-size: 0.8em; /* Smaller font size */
+    background-color: #E64444; /* Red color for beta */
+    color: white;
+    padding: 2px 4px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px white solid;
+}
+
+nav a {
+    padding: 8px 12px;
+    color: #FFF;
+    vertical-align: middle;
+    transition: background-color 0.1s ease;
+}
+
+nav a:hover {
+    background-color: #389438;
+    text-decoration: none;
+}
+
+/* Search Bar Styles */
+.search-container {
+    flex-grow: 1; /* Take up remaining space */
+    margin: 0 10px; /* Add some margin on the sides */
+}
+
+.search-bar {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+    outline: none; /* Remove default outline on focus */
+    font-family: helvetica, "Helvetica Neue", arial, sans-serif;
+    float: left;
+    font-weight: bold;
+}
+.search-bar::placeholder { /* Style placeholder text */
+    color: #777;
+}
+.search-bar:focus {
+    background-color: white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on focus */
+}
+
+
+/* Hero Section */
+.hero {
+    background-color: #389438;
+    display: flex;
+    gap: 100px;
+    padding: 60px 200px;
+    vertical-align: center;
+}
+
+.hero-content {
+    text-align: left;
+    float: left;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 3em;
+    color: #fff;
+}
+.hero h2 {
+    font-size: 2em;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 3em;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-buttons a {
+    background-color: #fff;
+    border: none;
+    color: #389438;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+    border: 2px solid #389438;
+    font-weight: bold;
+}
+
+.hero-buttons a:hover {
+    transform: scale(1.1);
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 4px;
+    float: right;
+}
+
+.green.trapezoid {
+	border-top: 20px solid #389438;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	height: 0;
+	width: 50px;
+	margin-left: 30px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 1428px) { /* Example breakpoint - adjust as needed */
+    .hero {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center horizontally */
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .hero img {
+        max-width: 90%; /* Make image take up most of the width */
+        margin: 0 auto; /* Center image */
+    }
+}
+@media (max-width: 1000px) {
+    .hero img {
+        display: none;
+    }
+}
+
+/* Feature Section (Three Columns) */
+.feature-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-around; /* Distribute features evenly */
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.feature {
+    width: 30%; /* Roughly one-third width for each feature */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+.feature ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+@media (max-width: 768px) {
+    .feature {
+        width: 45%; /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .feature {
+        width: 100%; /* One column on even smaller screens */
+    }
+}
+
+/* Section Styles */
+.section {
+    padding: 40px 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 2em;
+}
+.section p {
+    max-width: 800px;
+    margin: 1em auto;
+}
+.section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+.section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#minifooter {
+    display: none; /* Initially hidden */
+}
+
+.footer-section {
+    width: 18%;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+    .footer-section {
+        width: 45%;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.footer-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: 5px;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+footer .trapezoid {
+	border-top: 20px solid #F8F8F8;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	height: 0;
+	width: 50px;
+	margin-left: 30px;
+}
+
+.disclaimer {
+    font-size: 1.1em; /* Smaller font size */
+    color: #999; /* Lighter text color */
+    text-align: center; /* Center the text */
+}
+
+.disclaimer a {
+    color: white; /* Or another suitable link color */
+    text-decoration: none;
+}
+
+/* Community Guidelines Page Styles */
+.community-guidelines {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.guidelines-section {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.guideline {
+    margin-bottom: 20px; /* Space between guidelines */
+    padding: 15px 30px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.guideline h3 {
+    margin-top: 0; /* Remove default top margin on h3 */
+    margin-bottom: 10px;
+    color: #389438;
+    font-size: 1.5em;
+}
+
+.guideline p {
+    line-height: 1.6;
+}
+
+.guideline-icon {
+    float: right;
+    padding: 2px;
+}
+
+/* Section Styles (Important for Signup Page) */
+.section {
+    padding: 40px 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Signup Page Styles */
+.signup-section {
+    max-width: 500px; /* Adjust as needed */
+    margin: 100px auto; /* Center the section */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.signup-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #389438; /* Use your brand color */
+}
+
+.signup-section .form-group {
+    margin-bottom: 15px;
+}
+
+.signup-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.signup-section input[type="text"],
+.signup-section input[type="email"],
+.signup-section input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.signup-section button {
+    background-color: #389438;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    border: 2px solid #389438;
+}
+
+.signup-section p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.input-style { /* Common styles for both inputs */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em; /* Ensure consistent font size */
+}
+
+#pronoun-note {
+    margin-top: 5px;
+    font-size: 0.9em; /* Smaller font size for the note */
+    color: #555; /* Grayish color for the note */
+}
+
+/* Extra styles */
+
+.important-message {
+    background-color: #FF4C4C; /* Light red background */
+    border: 1px solid #C73A3A; /* Darker red border */
+    color: white; /* White text for contrast */
+    padding: 20px; /* Add some padding around the text */
+    margin: 20px 0; /* Add top and bottom margins */
+    border-radius: 20px; /* Slightly rounded corners */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.important-message a {
+    color: white; /* White links */
+    text-decoration: underline;
+}
+
+/* 404 Styles */
