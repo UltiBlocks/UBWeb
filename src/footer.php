@@ -12,7 +12,7 @@
       <h3>Community</h3>
       <ul>
         <li><a href="/guidelines">Community Guidelines</a></li>
-        <li><a href="https://scratch.mit.edu/discuss/topic/804448">UltiBlocks Forum Topic</a></li>
+        <li><a href="https://scratch.mit.edu/discuss/topic/804448">UltiBlocks Forum Topic/a></li>
         <li><a href="https://ultiblocks.miraheze.org">UltiBlocks Wiki</a></li>
       </ul>
     </div>
