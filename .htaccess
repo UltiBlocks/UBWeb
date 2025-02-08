@@ -1,3 +1,5 @@
+Require all granted
+
 RewriteEngine On
 
 # Prevent direct access to src folder
