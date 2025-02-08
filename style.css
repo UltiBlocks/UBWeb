@@ -217,6 +217,11 @@ nav a:hover {
     float: right;
 }
 
+.trapezoid {
+    float: left;
+    display: inline;
+}
+
 .green.trapezoid {
 	border-top: 20px solid #389438;
 	border-left: 20px solid transparent;
