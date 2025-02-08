@@ -2,7 +2,7 @@
 
 $config = json_decode(file_get_contents('config.json'), true);
 $requestUri = $_SERVER['REQUEST_URI'];
-$basePath = '/ultiblocks/';
+$basePath = '/';
 $requestUri = str_replace($basePath, '', $requestUri);
 $requestUri = trim($requestUri, '/');
 

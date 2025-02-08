@@ -11,15 +11,15 @@
     <div class="footer-section">
       <h3>Community</h3>
       <ul>
-        <li><a href="/ultiblocks/guidelines">Community Guidelines</a></li>
-        <li><a href="#">Discuss UltiBlocks</a></li>
-        <li><a href="#">UltiBlocks Wiki</a></li>
+        <li><a href="/guidelines">Community Guidelines</a></li>
+        <li><a href="https://scratch.mit.edu/discuss/topic/804448">UltiBlocks Forum Topic</a></li>
+        <li><a href="https://ultiblocks.miraheze.org">UltiBlocks Wiki</a></li>
       </ul>
     </div>
     <div class="footer-section">
       <h3>Resources</h3>
       <ul>
-        <li><a href="/ultiblocks/tips">UltiBlocks Tips</a></li>
+        <li><a href="/tips">UltiBlocks Tips</a></li>
         <li><a href="#">Questions and Answers</a></li>
         <li><a href="#">UltiBlocks Packager</a></li>
         <li><a href="#">UltiBlocks Desktop</a></li>
