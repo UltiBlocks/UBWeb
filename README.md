@@ -1,7 +1,7 @@
 # UBWeb
-This is a client to upload UltiBlocks projects.
+This is a full-stack server solution to upload UltiBlocks projects.
 ## Development
-You will need docker.
+You will need Docker.
 
 Use these two commands:
 ```
@@ -11,4 +11,4 @@ docker run -p 8080:80 ubweb
 
 Go to http://localhost:8080 and a page saying "Program anything" should appear.
 
-Alternatively, UBWeb can run on a barebones server, but this is not recommended as it is hard to manage properly.
+Alternatively, UBWeb can run on a bare-bones server, but this is not recommended as it is hard to manage properly.
